@@ -1,0 +1,226 @@
+/* Custom styles on top of Bootstrap */
+.navbar {
+    background-color: purple;
+}
+
+.btn-purple {
+    background-color: purple;
+    color: white;
+}
+
+.btn-purple:hover {
+    background-color: #800080;
+    color: white;
+}
+
+/* Keep the existing styles that don't conflict with Bootstrap */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f4f4f4;
+}
+
+.container {
+    flex: 1;
+}
+
+p {
+    font-size: 25px;
+    border: 2px solid red;
+    padding: 20px;
+    margin: 20px 0;
+    background-color: white;
+    border-radius: 5px;
+}
+
+/* Footer styles */
+.footer {
+    background-color: black;
+    color: white;
+    padding: 2rem 0;
+    margin-top: auto;
+    width: 100%;
+    bottom: 0;
+}
+
+.footer-content {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.footer h3 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.footer-text {
+    color: #ccc;
+    font-size: 16px;
+    border: none;
+    margin: 10px 0;
+    padding: 0;
+    background-color: transparent;
+}
+
+/* Sidebar styles */
+.wrapper {
+    display: flex;
+    flex: 1;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 100vh;
+    padding: 20px;
+    transition: all 0.3s;
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: #343a40;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+    border-bottom: 1px solid #47748b;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+#sidebar ul li a:hover {
+    background: #800080;
+    color: white;
+}
+
+#sidebar ul li.active > a {
+    background: purple;
+}
+
+#sidebar ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #454d55;
+}
+
+#content {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Make sidebar responsive */
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+}
+
+/* Adjust container for sidebar layout */
+.container {
+    width: 100%;
+    padding: 15px;
+    margin: 0;
+}
+
+/* Slideshow styles */
+.slideshow-container {
+    max-width: 800px;
+    position: relative;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.mySlides {
+    display: none;
+    text-align: center;
+}
+
+.mySlides img {
+    max-width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+}
+
+.mySlides .text {
+    color: purple;
+    font-size: 20px;
+    padding: 8px 12px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: purple;
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(255,255,255,0.8);
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: purple;
+    color: white;
+}
+
+/* The dots/bullets/indicators */
+.dots-container {
+    margin: 20px 0;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active-dot, .dot:hover {
+    background-color: purple;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+} 
